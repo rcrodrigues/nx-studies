@@ -1,9 +1,13 @@
 import { AppProps } from 'next/app';
 import Head from 'next/head';
 import './styles.css';
-import '@nextworkspace/ui';
+import { useEffect } from 'react';
 
 function CustomApp({ Component, pageProps }: AppProps) {
+
+  useEffect(() => { import('@nextworkspace/ui-ng') }, []);
+  useEffect(() => { import('@nextworkspace/ui') }, []);
+
   return (
     <>
       <Head>

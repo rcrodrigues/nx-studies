@@ -10,6 +10,10 @@ export function Index() {
     <div className={styles.page}>
       <h2>Resources &amp; Tools</h2>
       <p>Thank you for using and showing some ♥ for Nx.</p>
+      <happynrwl-greeting title={"Next JS \\o/"}></happynrwl-greeting>
+      <mat-nx-button>teste</mat-nx-button>
+      <mat-nx-slider min="1" max="100" step="1" value="50"></mat-nx-slider>
+      <uing-custom></uing-custom>
       <div className="flex github-star-container">
         <a
           href="https://github.com/nrwl/nx"

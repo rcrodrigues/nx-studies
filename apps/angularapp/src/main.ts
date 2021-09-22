@@ -1,4 +1,4 @@
-// import '@nextworkspace/ui-ng';
+import '@nextworkspace/ui-ng';
 // import '@nextworkspace/ui-wcb';
 import '@nextworkspace/ui';
 import { enableProdMode } from '@angular/core';
