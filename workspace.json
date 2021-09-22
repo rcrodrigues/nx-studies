@@ -92,7 +92,10 @@
             "passWithNoTests": true
           }
         }
-      }
+      },
+      "styles": [
+        "node_modules/@angular/material/prebuilt-themes/indigo-pink.css"
+      ]
     },
     "angularapp-e2e": {
       "root": "apps/angularapp-e2e",
@@ -195,84 +198,6 @@
           "outputs": ["{options.outputFile}"],
           "options": {
             "lintFilePatterns": ["apps/host-e2e/**/*.{js,ts}"]
-          }
-        }
-      }
-    },
-    "reactapp": {
-      "root": "apps/reactapp",
-      "sourceRoot": "apps/reactapp",
-      "projectType": "application",
-      "targets": {
-        "build": {
-          "executor": "@nrwl/next:build",
-          "outputs": ["{options.outputPath}"],
-          "options": {
-            "root": "apps/reactapp",
-            "outputPath": "dist/apps/reactapp"
-          },
-          "configurations": {
-            "production": {}
-          }
-        },
-        "serve": {
-          "executor": "@nrwl/next:server",
-          "options": {
-            "buildTarget": "reactapp:build",
-            "dev": true
-          },
-          "configurations": {
-            "production": {
-              "buildTarget": "reactapp:build:production",
-              "dev": false
-            }
-          }
-        },
-        "export": {
-          "executor": "@nrwl/next:export",
-          "options": {
-            "buildTarget": "reactapp:build:production"
-          }
-        },
-        "test": {
-          "executor": "@nrwl/jest:jest",
-          "outputs": ["coverage/apps/reactapp"],
-          "options": {
-            "jestConfig": "apps/reactapp/jest.config.js",
-            "passWithNoTests": true
-          }
-        },
-        "lint": {
-          "executor": "@nrwl/linter:eslint",
-          "outputs": ["{options.outputFile}"],
-          "options": {
-            "lintFilePatterns": ["apps/reactapp/**/*.{ts,tsx,js,jsx}"]
-          }
-        }
-      }
-    },
-    "reactapp-e2e": {
-      "root": "apps/reactapp-e2e",
-      "sourceRoot": "apps/reactapp-e2e/src",
-      "projectType": "application",
-      "targets": {
-        "e2e": {
-          "executor": "@nrwl/cypress:cypress",
-          "options": {
-            "cypressConfig": "apps/reactapp-e2e/cypress.json",
-            "devServerTarget": "reactapp:serve"
-          },
-          "configurations": {
-            "production": {
-              "devServerTarget": "reactapp:serve:production"
-            }
-          }
-        },
-        "lint": {
-          "executor": "@nrwl/linter:eslint",
-          "outputs": ["{options.outputFile}"],
-          "options": {
-            "lintFilePatterns": ["apps/reactapp-e2e/**/*.{js,ts}"]
           }
         }
       }
