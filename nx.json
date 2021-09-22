@@ -1,0 +1,74 @@
+{
+  "npmScope": "nextworkspace",
+  "affected": {
+    "defaultBase": "master"
+  },
+  "implicitDependencies": {
+    "package.json": {
+      "dependencies": "*",
+      "devDependencies": "*"
+    },
+    ".eslintrc.json": "*"
+  },
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "@nrwl/workspace/tasks-runners/default",
+      "options": {
+        "cacheableOperations": ["build", "lint", "test", "e2e"]
+      }
+    }
+  },
+  "targetDependencies": {
+    "build": [
+      {
+        "target": "build",
+        "projects": "dependencies"
+      }
+    ]
+  },
+  "projects": {
+    "angularapp": {
+      "tags": [],
+      "styles": [
+        "node_modules/@angular/material/prebuilt-themes/indigo-pink.css"
+      ]
+    },
+    "angularapp-e2e": {
+      "tags": [],
+      "implicitDependencies": ["angularapp"]
+    },
+    "host": {
+      "tags": []
+    },
+    "host-e2e": {
+      "tags": [],
+      "implicitDependencies": ["host"]
+    },
+    "reactapp": {
+      "tags": []
+    },
+    "reactapp-e2e": {
+      "tags": [],
+      "implicitDependencies": ["reactapp"]
+    },
+    "reactapptwo": {
+      "tags": []
+    },
+    "reactapptwo-e2e": {
+      "tags": [],
+      "implicitDependencies": ["reactapptwo"]
+    },
+    "ui": {
+      "tags": []
+    },
+    "ui-ng": {
+      "tags": []
+    },
+    "ui-wc": {
+      "tags": []
+    },
+    "ui-wcb": {
+      "tags": []
+    }
+  }
+}
